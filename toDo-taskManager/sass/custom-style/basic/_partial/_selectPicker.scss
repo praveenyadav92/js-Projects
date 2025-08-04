@@ -1,0 +1,71 @@
+
+.bootstrap-select {
+    .dropdown-toggle {
+        @include mq("tablet-small"){
+            padding: 0px 30px
+        }
+        .filter-option {
+            @include flexbox;
+            @include align-items(center);
+            height: 100%;
+            color: var(--grey8) !important;
+            font-weight: 600 !important;
+            font-family: var(--fontFamilyBold) !important;
+            font-size: $font16 !important;
+        }
+
+        &:after {
+            font-family: "Font Awesome 5 Free";
+            content: "\f078";
+            font-weight: 900;
+            @include position(absolute, 0);
+            right: 20px;
+            top: 20px;
+            color: var(--grey8) !important;
+            //transform: translateY(-50%);
+            border: 0;
+            transition: all .5s ease;
+        }
+
+        &.show {
+            &:after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .dropdown-menu li {
+        border-bottom: 2px solid var(--lightgrey);
+        margin-bottom: 5px;
+
+        a {
+            padding: 15px 30px;
+            font-size: $font14;
+            font-family: var(--fontFamilyBold);
+            @include position(relative, 0);
+
+            &:after {
+                content: "";
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: var(--themeTertiary);
+                @include position(absolute, 0);
+                left: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &.selected {
+            a.selected {
+                span.check-mark {
+                    right: 15px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: var(--themeTextSecondary);
+                }
+            }
+        }
+    }
+}

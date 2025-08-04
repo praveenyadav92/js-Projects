@@ -1,0 +1,266 @@
+.main-banner {
+
+    @include position(relative, 0);
+    background-color: var(--grey2);
+    min-height: 100vh;
+    color: var(--white);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    >.container {
+      z-index: 9;
+      position: relative;
+  
+    }
+  
+    .circle {
+      @include position(absolute, 0);
+      border: 1px solid #ffffff0a;
+      @include border-radius(50%);
+      left: 50%;
+      top: 50%;
+      @include translate(-50%, -50%);
+      transition: background-color 0.5s;
+  
+      &.one {
+        width: 1300px;
+        height: 1300px;
+      }
+  
+      &.two {
+        width: 1100px;
+        height: 1100px;
+      }
+  
+      &.three {
+        width: 900px;
+        height: 900px;
+      }
+  
+      &.four {
+        width: 700px;
+        height: 700px;
+      }
+  
+      &.five {
+        width: 500px;
+        height: 500px;
+      }
+  
+      &.six {
+        width: 300px;
+        height: 300px;
+      }
+    }
+  
+    .main-banner_wrapper {
+      min-height: calc(100vh - 50px);
+      @include flexbox;
+      @include flex-direction(column, vertical);
+      @include align-items(center);
+      @include justify-content(center);
+      padding-top: 150px;
+      
+  
+      .heading-content {
+        color: var(--white);
+        text-transform: uppercase;
+        font-family: var(--fontFamilyBold);
+        text-align: center;
+  
+        .sub-title {
+          font-size: $font16;
+          margin: 0;
+          margin-bottom: 10px;
+          font-family: var(--fontFamilyRegular);
+  
+          @include mq("tablet") {
+            font-size: $font28;
+            margin-bottom: 0;
+          }
+        }
+  
+        .title {
+          font-size: 2.5rem;
+          margin-bottom: 20px;
+  
+          @include mq("tablet") {
+            font-size: 2.8rem;
+          }
+  
+          @include mq("tablet-max") {
+            font-size: 3.5rem;
+          }
+  
+          @include mq("desktop-min") {
+            font-size: 4.8rem;
+          }
+          @include mq("desktop-wide") {
+            font-size: 6.5rem;
+          }
+          
+        }
+      }
+  
+      .video-wrapper {
+        width: 100%;
+        margin: 0px auto 0px auto;
+        max-width: 600px;
+        @include mq("tablet") {
+          max-width: 800px;
+        }
+  
+        video {
+          width: 100%;
+          height: 100%;
+          border: 3px solid white;
+          object-fit: cover;
+        }
+  
+        p {
+          margin: 0px;
+          margin-top: 15px;
+          font-size: $font16;
+          text-align: center;
+         
+        }
+      }
+  
+      .btn-wrapper {
+        @include flexbox;
+        @include justify-content(space-between);
+        @include align-items(center);
+        @include justify-content(center);
+        padding: 20px 0px;
+        margin-top: 20px;
+        .btn-theme {
+          text-transform: uppercase;
+          font-size: $font16;
+          @include inline-flex;
+          @include justify-content(center);
+          @include align-items(center);
+          color: var(--white);
+          padding: 10px 30px;
+          border-radius: 30px;
+          min-width: 100px;
+  
+          &.btn-border {
+            border: 2px solid var(--white);
+            margin-top: 20px;
+          }
+  
+          &.animated-btn {
+            animation: rotation 3s linear 0s infinite;
+            background: linear-gradient(var(--gradient-angle), rgb(255, 255, 255), rgb(0, 0, 0));
+            padding: 0;
+  
+            span {
+              display: block;
+              margin: 2px;
+              background-color: var(--black);
+              padding: 10px 20px;
+              border-radius: 30px;
+              font-size: $font20;
+              line-height: 20px;
+  
+              @include mq("tablet") {
+                padding: 18px 40px;
+              }
+            }
+  
+          }
+  
+        }
+      }
+    }
+  
+   
+  
+    .overlay-banner {
+      content: "";
+      width: 100%;
+      max-width: 400px;
+      @include position(absolute, 0);
+      bottom: -5px;
+      right: 0;
+      display: none;
+  
+      @include mq("tablet") {
+        display: block
+      }
+  
+      @include mq("desktop-wide") {
+        max-width: 500px;
+      }
+  
+      @include mq("desktop-wide-max") {
+        max-width: 600px;
+      }
+    }
+  
+    .overlay-text {
+      @include position(relative, 0);
+      text-transform: uppercase;
+      font-size: $font16;
+      font-family: var(--fontFamilyRegular);
+      color: var(--white);
+      left: 50%;
+      bottom: 20px;
+      letter-spacing: 5px;
+      @include translate(-50%, -50%);
+      text-align: center;
+      display: none;
+  
+      @include mq("tablet") {
+        @include position(absolute, 0);
+        transform: rotate(270deg);
+        bottom: 130px;
+        left: -50px;
+        display: block
+      }
+    }
+  
+    .overlay-icon {
+      @include position(relative, 0);
+      bottom: 10px;
+      transition: all .5s ease;
+      // transition: all .3s ease;
+      @include mq("tablet") {
+        @include position(absolute, 0);
+        top: 50%;
+        left: 30px;
+        @include translate(0, -50%);
+        bottom: auto
+      }
+  
+      .icon {
+        @include flexbox;
+        @include justify-content(center);
+        @include align-items(center);
+        @include flex-direction(row, horizontal);
+  
+        @include mq("tablet") {
+          @include flex-direction(column, vertical);
+        }
+  
+        .icon_item {
+          a svg {
+            color: var(--white);
+            width: 20px;
+            height: 20px;
+            fill: var(--white);
+            margin-bottom: 20PX;
+            margin: 0px 10px;
+  
+            @include mq("tablet") {
+              width: 18px;
+              height: 18px;
+              margin: 10px 0px;
+            }
+          }
+        }
+      }
+    }
+  }

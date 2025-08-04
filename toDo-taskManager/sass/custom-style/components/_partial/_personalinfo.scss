@@ -1,0 +1,61 @@
+.c-personalinfo {
+    $perinfo:&;
+    &__section {
+        @include flexbox;
+        @include flex-direction(column, vertical);
+        margin-top: 20px;
+        padding-top:25px;
+        padding-bottom:25px;
+        border-top:1px var(--lightgrey2) solid;
+        &--item {
+            @include flexbox;
+            @include flex-direction(column, vertical);
+            position: relative;
+            padding-left:53px;
+            margin-bottom: 30px;
+            &:before {
+                content: "";
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                background-color: var(--grey13);
+                background-image: url(../images/icon/mail.svg);
+                background-position: center center;
+                background-size: 17px 11px;
+                background-repeat: no-repeat;
+                left:0;
+                top:0;
+                @include border-radius(8px);
+            }
+            & .itemhead {
+                font-size: $font14;
+                font-family: var(--fontFamilyBold);
+                color:var(--black3);
+            }
+            & .label {
+                font-size: $font12;
+                font-family: var(--fontFamilyRegular);
+                color:var(--black3);
+            }
+            @include mq("desktop-min") {
+                
+                width: 50%;
+            }
+            &:last-child {
+                margin-bottom: 0px;
+            }
+            &.fullwidth{
+                width: 100%;
+                @include mq("desktop-min") {
+                
+                    width: 100%;
+                }
+            }
+        }
+
+        @include mq("desktop-min") {
+            @include flex-direction(row, horizontal);
+            flex-wrap: wrap;
+        }
+    }
+}

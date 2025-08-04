@@ -1,0 +1,28 @@
+
+.dropdown-menu  {
+   
+    right:0 !important;
+   
+}
+
+.dropdown-list-menu {
+    padding: 0px;
+    margin: 0px;
+    li {
+        a {
+            color: var(--grey3);
+            font-family: var(--fontFamilyMedium);
+            font-size: $font12;
+            border-bottom: 1px solid var(--grey3);
+            padding: 10px 20px;
+
+            &:hover {
+                background-color: var(--grey);
+            }
+
+            &:active {
+                background-color: var(--bg-transparent)
+            }
+        }
+    }
+}

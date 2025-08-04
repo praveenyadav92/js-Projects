@@ -1,0 +1,113 @@
+// =======accessibility========
+
+.accessibility_btns {
+    @include position(fixed, 0);
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+    width: 50px;
+    height: 50px;
+    background-color: var(--white);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    right: 0;
+    top: 100px;
+    z-index: 99;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--grey2);
+    border-right-color: transparent;
+
+    @include mq("tablet-wide") {
+        display: none;
+    }
+
+    button {
+        border: 0;
+        background-color: var(--bg-transparent);
+
+        svg {
+            width: 35px;
+            height: 35px;
+            fill: var(--white);
+        }
+    }
+}
+
+.accessibility_slide {
+    @include position(fixed, 0);
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--grey3);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    right: 0;
+    top: 50%;
+    transform: translate(100%, -50%);
+    z-index: 1099;
+    transition: all .3s ease;
+
+    &.active {
+        transform: translate(0%, -50%);
+
+        @include mq("desktop-min") {
+            transform: translate(100%, -50%);
+        }
+    }
+
+    button {
+        background-color: transparent;
+        border: 0;
+        color: var(--white)
+    }
+
+    &_head {
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(space-between);
+        padding: 1rem;
+
+        h3 {
+            margin: 0;
+            font-family: var(--fontFamilyMedium);
+            font-size: $font16;
+            color: var(--white);
+        }
+    }
+
+    &_box {
+        padding: 0px 1rem;
+        padding-bottom: 1rem;
+
+        &_head {
+            font-size: $font16;
+            line-height: 1.5;
+            color: var(--white);
+        }
+
+        &_actions {
+            .action_btn {
+                height: 2rem;
+                border-radius: .5rem;
+                border: 1px solid var(--themeBorderSecondary);
+                padding: 0px 10px;
+                color: var(--white);
+                min-width: 50px;
+
+                &.light-btn {
+                    background-color: var(--white);
+                    border-color: var(--white);
+                    color: var(--grey3);
+                }
+
+                &.dark-btn {
+                    background-color: var(--black);
+                    border-color: var(--black);
+                }
+
+                +.action_btn {
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}

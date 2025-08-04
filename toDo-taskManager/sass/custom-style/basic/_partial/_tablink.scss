@@ -1,0 +1,24 @@
+.c-tablink {
+    $tablink:&;
+    & .nav-link {
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(center);
+        @include border-radius(15px);
+        padding:15px 41px;
+        @include box-shadow(0px -4px 20px 0px #00000005);
+        border: 1px solid var(--grey13);
+        background-color: var(--grey13);
+        font-size: $font14;
+        font-family: var(--fontFamilyBold);
+        color:var(--blue2);
+        margin-right:20px;
+        margin-bottom: 8px;
+        @include transition( all .3s ease-out);
+        &:hover, &.active {
+            background-color: var(--themeClr1);
+            color:var(--white);
+
+        }
+    }
+}

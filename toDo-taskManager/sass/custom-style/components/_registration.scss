@@ -1,0 +1,633 @@
+.r-reg__wrapper {
+    &.h-100vh {
+        min-height: calc(100vh - 120px);
+        display: flex;
+    }
+
+    &--main {
+        background-color: var(--white);
+        padding: 20px;
+        border-radius: 15px;
+        max-width: 700px;
+        margin: auto;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+
+        @include mq("tablet-small") {
+            padding: 40px;
+        }
+
+        .heading_wrapper {
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--grey);
+
+            .heading {
+                color: var(--themeTextPrimary);
+                font-size: $font26;
+                text-align: center;
+                font-family: var(--fontFamilyBold);
+
+                @include mq("tablet-max") {
+                    font-size: $font36;
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.r-header {
+    $header: &;
+    @include position(fixed, 0);
+    background-color: var(--white);
+    width: 100%;
+    z-index: 999;
+    padding: 10px 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+
+    @include mq("tablet") {
+        padding: 20px 30px
+    }
+
+    @include mq("tablet-max") {
+        padding: 20px 30px
+    }
+
+    &.with-user-dropdown {
+        .content_block--info {
+            @include mq("tablet-max") {
+                display: block;
+            }
+        }
+
+        .r-header__wrapper--right {
+            .content_block--info {
+                display: block;
+            }
+        }
+    }
+
+    &.withProgessBar {
+        .progress_main {
+            display: block;
+        }
+
+    }
+
+
+    &__wrapper {
+        @include flexbox;
+        @include flex-direction(row, horizontal);
+        @include justify-content(space-between);
+        //border-bottom: 1px solid var(--grey);
+        padding-bottom: 10px;
+
+        @include mq("tablet-max") {
+            border-bottom: 0px;
+            padding-bottom: 0;
+        }
+
+        &--left {
+            @include mq("tablet-max") {
+                @include flexbox;
+                padding-right: 10px;
+                @include align-items(center);
+                background-color: red;
+            }
+
+            .logo {
+                padding-right: 50px;
+                border-right: 2px solid var(--grey);
+                @include flexbox;
+                @include justify-content(center);
+
+                img {
+                    height: 70px;
+
+                    // @include mq("tablet-max") {
+                    //     height: 80px;
+                    // }
+                }
+            }
+
+            .content_block--info {
+                width: 100%;
+                padding-left: 50px;
+                display: none;
+
+                @include mq("tablet-max") {
+                    display: block;
+                }
+
+                .heading_wrapper {
+                    margin-bottom: 0;
+
+                    .heading {
+                        @include mq("tablet-max") {
+                            font-size: $font16;
+                        }
+
+                        @include mq("desktop-wide") {
+                            font-size: $font22;
+                        }
+                    }
+                }
+
+                .sub-info {
+                    font-size: 10px;
+                    margin-bottom: 5px;
+
+                    @include mq("tablet") {
+                        font-size: $font18;
+
+                    }
+                }
+            }
+        }
+
+
+        &--right {
+            padding-left: 10px;
+            @include flexbox;
+            @include align-items(center);
+            @include justify-content(center);
+
+            @include mq("tablet-max") {
+                border-left: 2px solid var(--grey);
+                padding-left: 30px;
+            }
+
+            .content_block {
+                @include flexbox;
+                width: 100%;
+                @include justify-content(end);
+                @include align-items(center);
+
+                .btn-div {
+                    margin-right: 15px;
+
+                    a.btn {
+                        background-color: var(--grey);
+                        font-size: $font12;
+                        padding: 10px 10px;
+                        color: var(--grey3);
+                        @include inline-flex;
+                        @include align-items(center);
+                        border-radius: 20px;
+                        white-space: nowrap;
+                        font-weight: 600;
+
+                        .icon {
+                            svg {
+                                width: 20px;
+                                height: 20px;
+                            }
+
+                            display: block;
+
+                            @include mq("phablet") {
+                                display: none;
+                            }
+                        }
+
+                        .info {
+                            display: none;
+
+                            @include mq("phablet") {
+                                display: block;
+                            }
+                        }
+
+                        @include mq("phablet") {
+                            padding: 10px 20px;
+                            font-size: $font14;
+                        }
+                    }
+                }
+
+                &--info {
+                    display: none;
+
+                    .user-dropdown {
+                        button {
+                            @include flexbox;
+                            @include justify-content(center);
+                            @include align-items(center);
+                            @include position(relative, 0);
+                            padding-right: 20px;
+                            white-space: nowrap;
+
+                            &:before {
+                                font-family: "Font Awesome 5 Free";
+                                content: "\f078";
+                                font-weight: 900;
+                                @include position(absolute, 0);
+                                right: 0;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+
+                            .icon {
+                                background-color: var(--themePrimary);
+                                color: var(--white);
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 50%;
+                                font-size: $font12;
+                                @include flexbox;
+                                @include justify-content(center);
+                                @include align-items(center);
+                                margin-right: 10px;
+                                font-weight: 600;
+
+                                @include mq('tablet-max') {
+                                    width: 65px;
+                                    height: 65px;
+                                    font-size: $font22;
+                                }
+                            }
+
+                            .info {
+                                font-size: $font12;
+                                font-weight: 600;
+                                color: var(--grey3);
+                                display: none;
+
+                                @include mq("phablet") {
+                                    display: block;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+.heading_wrapper {
+    .sub-info {
+        font-size: $font18;
+        font-family: var(--fontFamilyRegular);
+        color: var(--grey3);
+        font-weight: 300;
+        margin: 0;
+    }
+
+    .heading {
+        font-size: $font22;
+        font-family: var(--fontFamilyBold);
+        color: var(--grey3);
+        font-weight: 900;
+        line-height: 1.5;
+        margin: 0;
+        @include position(relative, 0);
+
+
+
+    }
+}
+
+
+
+.r-bodyContent {
+    background: linear-gradient(97.79deg, #FCF0DD 1.35%, rgba(250, 250, 255, 0) 131.08%);  
+    padding-top: 100px;
+    min-height: 100vh;
+
+    &.with_sidebar {
+        .r-bodyContent__sidebar {
+            display: block;
+        }
+
+        .r-bodyContent__box {
+            @include mq("desktop-min") {
+                width: calc(100% - 320px);
+                margin-left: 320px;
+            }
+
+        }
+    }
+
+    &__sidebar {
+
+        width: 100%;
+        overflow-y: auto;
+        display: none;
+
+        @include mq("tablet-max") {
+            padding-top: 50px;
+        }
+
+        @include mq("desktop-min") {
+            width: 320px;
+            @include position(fixed, 0);
+            top: 100px;
+            left: 0;
+            height: calc(100vh - 100px);
+            padding: 50px 0;
+        }
+
+        .r-bodyContent-sideBar__navigation {
+            &__grid {
+                @include flexbox;
+                @include flex-direction(row, horizontal);
+
+                @include mq("desktop-min") {
+                    @include flex-direction(column, vertical);
+                }
+
+                &__list {
+                    flex: 1;
+
+                    @include mq("tablet") {
+                        flex: unset;
+                    }
+
+
+                    &.active {
+                        &>a {
+                            background-color: var(--white);
+                            width: 100%;
+                        }
+
+                    }
+
+                    &.success {
+                        >a {
+                            background-color: var(--themePrimary);
+
+                            .content {
+                                color: var(--white);
+                            }
+
+                            .icon {
+                                background-color: var(--white);
+                            }
+                        }
+
+                    }
+
+                    &:hover {
+                        &>a {
+                            width: 100%;
+                        }
+                    }
+
+                    &__item {
+                        @include flexbox;
+                        @include align-items(center);
+                        @include justify-content(center);
+                        //background-color: var(--lightgrey2);
+                        padding: 10px 20px;
+
+                        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+                        background-color: rgba(var(--baseWhite).5);
+                        background-color: rgb(255 255 255 / 31%);
+                        transition: all .3s ease;
+                        white-space: nowrap;
+                        justify-content: center;
+
+                        @include mq("desktop-min") {
+                            @include justify-content(end);
+                        }
+
+                        @include mq("desktop-min") {
+                            border-bottom-right-radius: 50px;
+                            border-top-right-radius: 50px;
+                            margin-bottom: 20px;
+                            width: calc(100% - 30px);
+                            padding: 10px;
+                        }
+
+
+
+                        .content {
+                            display: none;
+
+                            @include mq("tablet") {
+                                display: inline-block;
+                            }
+
+                            font-size: $font16;
+                            font-family: var(--fontFamilyMedium);
+                            margin-right: 15px;
+                            color: var(--grey3)
+                        }
+
+                        .icon {
+                            @include flexbox;
+                            @include align-items(center);
+                            @include justify-content(center);
+                            width: 50px;
+                            height: 50px;
+                            background-color: var(--lightgrey2);
+                            border-radius: 50%;
+
+                            svg {
+                                width: 20px;
+                                height: 20px;
+                                fill: var(--grey3);
+                            }
+                        }
+                    }
+
+                }
+            }
+
+
+        }
+    }
+
+    &__box {
+        width: 100%;
+
+        .form-basicBlock-container {
+            padding: 50px 10px;
+            @include mq("tablet-small"){
+                padding: 50px 30px;
+            }
+        }
+    }
+
+}
+
+
+
+.r-footer {
+    @include mq("tablet") {
+        @include position(fixed, 0);
+        left: 0;
+        bottom: 0;
+    }
+
+    width: 100%;
+    z-index: 99;
+    background-color: var(--white);
+    box-shadow: -5px -5px 10px var(--grey);
+    padding: 20px;
+
+    .footer__content--wrapper {
+        @include flexbox;
+        @include justify-content(center);
+        @include align-items(center);
+        flex-wrap: wrap;
+
+        @include mq("tablet") {
+            @include justify-content(space-between);
+        }
+
+        .content {
+            flex: 0 0 100%;
+
+            @include mq("tablet-max") {
+                flex: unset;
+            }
+
+            &--info {
+                font-size: $font16;
+                font-family: var(--fontFamilyMedium);
+                color: var(--grey3);
+
+                @include mq("phablet") {
+                    font-size: $font18;
+                }
+
+                span {
+                    color: var(--themeTextPrimary);
+                    font-size: $font30;
+                    font-family: var(--fontFamilyBold);
+                }
+            }
+
+
+        }
+
+        .btn-div {
+
+            order: 2;
+            flex: 0 0 50%;
+
+            @include mq("tablet-max") {
+                flex: unset;
+                order: unset;
+            }
+
+            &:last-child {
+                text-align: right;
+            }
+
+            button {
+
+                @include mq("phablet") {
+                    min-width: 250px;
+                }
+
+                .info {
+                    display: none;
+
+                    @include mq("phablet") {
+                        display: inline-block
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+.progress_main {
+    @include position(absolute, 0);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: none;
+
+    .progress {
+        height: 8px;
+        background-color: var(--grey);
+        overflow: unset;
+
+        &-bar {
+            background-color: var(--green);
+            @include position(relative, 0);
+            overflow: unset;
+        }
+
+        [data-tooltip]::before {
+            content: attr(aria-valuenow);
+            position: absolute;
+            top: -25px;
+            right: 0;
+            font-size: $font14;
+            z-index: 99;
+            //font-weight: 600;
+            color: var(--darkgrey);
+            font-family: var(--fontFamilyBold);
+        }
+    }
+}
+
+
+
+
+
+.res-wrapper {
+    display: block;
+    margin-top: 5px;
+    padding: 20px;
+    background-color: var(--lightBlue);
+
+    @include mq("tablet") {
+        margin-top: 20px;
+    }
+
+    @include mq("tablet-max") {
+        display: none
+    }
+
+    .heading_wrapper {
+        margin-bottom: 0;
+
+        .heading {
+            font-size: $font14;
+            text-align: center;
+            
+            @include mq("phable") {
+                font-size: $font16
+            }
+            @include mq("tablet-small") {
+                font-size: $font18;
+            }
+        }
+    }
+
+}
+
+.form-basicBlock {
+    padding-bottom: 100px;
+
+    &-section_wrapper {
+        display: block;
+        border-bottom: 2px solid var(--grey3);
+        margin-bottom: 20px;
+
+        @include mq("tablet") {
+            display: none;
+        }
+    }
+
+
+}
+
+
+.hide {
+    display: none;
+}

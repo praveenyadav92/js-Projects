@@ -1,0 +1,36 @@
+.innerpage {
+    $innerpage:&;
+    
+    &__head {
+        @include flexbox;
+        @include align-items(center);
+        padding-top: 50px;
+        padding-bottom: 50px;
+        &--content {
+            font-size: $font17;
+            font-family: var(--fontFamilyMedium);
+            color:var(--black3);
+        }
+        &--icon {
+            width:30px;
+            height: 30px;
+            background-color: var(--white);
+            @include flexbox;
+            @include align-items(center);
+            @include justify-content(center);
+            @include border-radius(50%);
+            margin-right:12px;
+        }
+       
+        
+        
+    }
+}
+
+
+.c-innerpagecontent {
+    padding:70px 0px;
+    @include mq("tablet-max") {
+        padding:90px 0px;
+    }
+}

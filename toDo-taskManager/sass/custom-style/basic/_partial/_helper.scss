@@ -1,0 +1,89 @@
+.cus-pt-10{
+    padding-top: 10px;
+}
+
+.cus-pt-15{
+    padding-top: 15px;
+}
+.cus-pt-20{
+    padding-top: 20px;
+}
+.cus-pt-25{
+    padding-top: 25px;
+}
+
+.cus-pt-30{
+    padding-top: 30px;
+}
+
+.cus-pb-10{
+    padding-bottom: 10px;
+}
+
+.cus-pb-15{
+    padding-bottom: 15px;
+}
+
+.cus-pb-20{
+    padding-bottom: 20px;
+}
+
+.cus-pb-25{
+    padding-bottom: 25px;
+}
+
+.cus-pb-30{
+    padding-bottom: 30px;
+}
+
+.cus_grid_6 {
+    @include position(relative, 0);
+    width: 100%;
+    overflow: hidden;
+    padding: 0px 30px;
+
+    @include mq("tablet") {
+        width: calc(var(--width720) / 12 * 12);
+    }
+
+    @include mq("tablet-max") {
+        width: calc(var(--width960) / 12 * 6);
+    }
+
+    @include mq("desktop-min") {
+        width: calc(var(--width1140) / 12 * 6);
+    }
+
+    @include mq("desktop-wide") {
+        width: calc(var(--width1320) / 12 * 6);
+    }
+    @include mq("desktop-wide-max") {
+        width: calc(var(--width1728px) / 12 * 6 - 10px);
+    }
+}
+.custom-container{
+    @include mq("desktop-wide") {
+        max-width: var(--width1728px);
+    }
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+a:hover {
+    color: var(--grey3);
+}
+.h-100vh {
+    min-height: 100vh;
+}
+
+.mh-100 {
+    min-height: 100px;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}

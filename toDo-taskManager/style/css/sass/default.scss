@@ -1,0 +1,110 @@
+.taskWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+
+    .sectionWrapper {
+        display: flex;
+        // align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: #efefef;
+        gap: 20px;
+        padding: 30px;
+        width: 100%;
+        max-width: 50%;
+        border-radius: 15px;
+
+        &__title {
+            color: #0666dd;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        &__name {
+            input {
+                width: 100%;
+                padding: 5px 10px;
+            }
+        }
+
+        &__option {
+            select {
+                width: 100%;
+                padding: 5px 10px;
+            }
+        }
+
+        &__actionBtn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: green;
+            color: white;
+            font-weight: 600;
+            border-radius: 25px;
+        }
+
+        &__search {
+            input {
+                width: 100%;
+                padding: 5px 10px;
+
+            }
+        }
+
+        &__tasklist {
+            &--result {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 15px;
+                padding: 10px;
+                border-radius: 5px;
+
+                .value {
+                    color: #1e1e1e;
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+
+                .editBtn {
+                    background: none;
+                    border: none;
+
+                    .u-image {
+                        width: 35px;
+                        min-width: 35px;
+                        min-height: 35px;
+                    }
+                }
+
+                .delBtn {
+                    background: none;
+                    border: none;
+
+                    .u-image {
+                        width: 35px;
+                        min-width: 35px;
+                        min-height: 35px;
+                    }
+                }
+            }
+        }
+    }
+
+    .low {
+        background: #90b6d1;
+    }
+
+    .med {
+        background: #dbc190;
+    }
+
+    .high {
+        background: #fb9e9e;
+    }
+
+
+}

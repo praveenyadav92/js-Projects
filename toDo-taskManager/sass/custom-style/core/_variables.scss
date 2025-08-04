@@ -1,0 +1,163 @@
+body {
+  --baseBlack: 0, 0, 0;
+  --baseWhite: 255, 255, 255;
+  --black: rgb(var(--baseBlack));
+  --white: rgb(var(--baseWhite));
+  --lightBlue: #E3E3FF;
+  --lightgrey : #f3f3ff;
+  --lightgrey2: #EFEFEF;
+  --darkgrey: #727B80;
+  --black2: #191e28;
+  --black3: #333333;
+  --black4:#1B1B1B;
+  --blue: #05111f;
+  --grey1: #efefef;
+  --grey2: #CCCCCC;
+  --grey2: #CCCCCC;
+  --grey3: #333333;
+  --grey4: #C9C9FF;
+  --grey5 : #F9F8F8;
+  --grey6 : #F1F0F5;
+  --grey7: #E8E7EC;
+  --grey8:#919191;
+  --grey9:#D9D9D9;
+  --grey10:#F9F9FC;
+  --grey11:#666666;
+  --grey12:#999999;
+  --grey13:#F5F5FA;
+  --orange: #FF660E;
+  --red : #f36;
+  --green : #6EDEC3;
+  --themePrimary: #BE9146;
+  --lightThemePrimary: #FFE6BD;
+  --themeSecondary:#232222;
+  --themeTertiary: #FCF1DD;
+  --themeQuinary: #AC612F;
+  --themeDarkShade: #002f00;
+  --themeTextPrimary: #000080;
+  --themeTextSecondary: #EACE30;
+  --themeTextTertiary: #AC612F;
+  --themeTextQuinary: #232222;
+  --themeBorderPrimary: #000080;
+  --themeBorderSecondary: #EACE30;
+  --themeBorderTertiary: #AC612F;
+  --themeBorderQuinary: #232222;
+  --themeClr1: #BE9146;
+  --themeClr2: #000080;
+  --themeClr3: #CF8C17;
+  --blue2: #1C009F;
+  --blue3: #528FCC;
+  --bg-transparent : #ffffff00;
+  --bgWhite : #FFFFFF;
+
+
+
+  --fontThin: 100;
+  --fontLight: 300;
+  --fontRegular: 400;
+  --fontMedium: 500;
+  --fontBold: 700;
+  --fontBolder: 800;
+
+  --fontSize12: 12px;
+  --fontSize13: 12px;
+  --fontSize14: 14px;
+  --fontSize15: 15px;
+  --fontSize16: 16px;
+  --fontSize17: 17px;
+  --fontSize18: 18px;
+  --fontSize20: 20px;
+  --fontSize22: 22px;
+  --fontSize24: 24px;
+  --fontSize25: 25px;
+  --fontSize26: 26px;
+  --fontSize28: 28px;
+  --fontSize30: 30px;
+  --fontSize32: 32px;
+  --fontSize35: 35px;
+  --fontSize36: 36px;
+  --fontSize40: 40px;
+  --fontSize45: 45px;
+  --fontSize50: 50px;
+  --fontSize60: 60px;
+  --fontSize70: 70px;
+  --fontSize75: 75px;
+  --fontSize80: 80px;
+  
+  --fontFamilyRegular:"GothamBook";
+  --fontFamilyMedium:"GothamMedium";
+  --fontFamilyBlack:"GothamBlack";
+  --fontFamilyBold:"GothamBold";
+  
+  --width1728px : 1520px;
+  --width1320:1320px;
+  --width1140 : 1140px;
+  --width960 : 960px;
+  --width720 : 720px;
+
+  --shadow-small: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+  0 1px 2px 0 rgba(0, 0, 0, 0.06);
+--shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+  0 2px 4px -1px rgba(0, 0, 0, 0.06);
+--shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+  0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+}
+
+$font12: var(--fontSize12);
+$font13: var(--fontSize13);
+$font14: var(--fontSize14);
+$font15: var(--fontSize15);
+$font16: var(--fontSize16);
+$font17: var(--fontSize17);
+$font18: var(--fontSize18);
+$font20: var(--fontSize20);
+$font22: var(--fontSize22);
+$font24: var(--fontSize24);
+$font26: var(--fontSize26);
+$font28: var(--fontSize28);
+$font30: var(--fontSize30);
+$font32: var(--fontSize32);
+$font35: var(--fontSize35);
+$font36: var(--fontSize36);
+$font40: var(--fontSize40);
+$font42: var(--fontSize42);
+$font45: var(--fontSize45);
+$font25: var(--fontSize25);
+$font50: var(--fontSize50);
+$font60: var(--fontSize60);
+$font70: var(--fontSize70);
+$font75: var(--fontSize75);
+$font80: var(--fontSize80);
+body.dark {
+  // --themePrimary: #fff;
+  // --baseBlack:255, 255, 255;
+  // --baseWhite: 0, 0, 0;
+  // --themeSecondary: black;
+  // --grey3: #fff;
+  // --lightgray: #000
+
+
+    
+}
+
+.font_decrease1 {
+  --fontSize14: 13px;
+}
+.font_decrease2 {
+  --fontSize14: 12px;
+}
+.font_increase1 {
+  --fontSize14: 15px;
+}
+.font_increase2 {
+  --fontSize14: 16px;
+}
+.bg-transparent{
+  background-color: var(--bg-transparent);
+}
+.bgColor3{
+  background-color: var(--themeQuinary) !important;
+}
+
+

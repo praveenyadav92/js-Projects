@@ -1,0 +1,106 @@
+body {
+  @include size(100%);
+  overscroll-behavior-y: none;
+  scrollbar-width: thin;
+  overscroll-behavior-y: none;
+  background-color: var(--themeClr2);
+  @include fontBase(var(--fontMedium));
+  font-size: $font14;
+
+  * {
+    @extend .scrollBar-smallWidth;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  @include transition(all 0.5s ease);
+
+  &:hover {
+    color: var(--lightBlue);
+  }
+}
+ul li,
+ol li,
+ul,
+ol {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.custom_container {
+  @include mq('desktop-wide-max') {
+    max-width: 1728px;
+  }
+}
+
+
+
+
+/* Begin Animation key frames */
+
+@keyframes leftToRightAnimate {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -550px 0;
+    }
+}
+
+.if-regular {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400;
+}
+
+.if-solid {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+
+@font-face {
+  font-family: 'GothamBook';
+  src: url('../fonts/GothamBook.eot');
+  src: url('../fonts/GothamBook.eot') format('embedded-opentype'),
+       url('../fonts/GothamBook.woff2') format('woff2'),
+       url('../fonts/GothamBook.woff') format('woff'),
+       url('../fonts/GothamBook.ttf') format('truetype'),
+       url('../fonts/GothamBook.svg#GothamBook') format('svg');
+}
+
+@font-face {
+  font-family: 'GothamMedium';
+  src: url('../fonts/GothamMedium.eot');
+  src: url('../fonts/GothamMedium.eot') format('embedded-opentype'),
+       url('../fonts/GothamMedium.woff2') format('woff2'),
+       url('../fonts/GothamMedium.woff') format('woff'),
+       url('../fonts/GothamMedium.ttf') format('truetype'),
+       url('../fonts/GothamMedium.svg#GothamMedium') format('svg');
+}
+
+@font-face {
+  font-family: 'GothamBlack';
+  src: url('../fonts/GothamBlack.eot');
+  src: url('../fonts/GothamBlack.eot');
+  src: url('../fonts/GothamBlack.eot') format('embedded-opentype'),
+       url('../fonts/GothamBlack.woff2') format('woff2'),
+       url('../fonts/GothamBlack.woff') format('woff'),
+       url('../fonts/GothamBlack.ttf') format('truetype'),
+       url('../fonts/GothamBlack.svg#GothamBlack') format('svg');
+}
+
+@font-face {
+  font-family: 'GothamBold';
+  src: url('../fonts/GothamBold.eot');
+  src: url('../fonts/GothamBold.eot') format('embedded-opentype'),
+       url('../fonts/GothamBold.woff2') format('woff2'),
+       url('../fonts/GothamBold.woff') format('woff'),
+       url('../fonts/GothamBold.ttf') format('truetype'),
+       url('../fonts/GothamBold.svg#GothamBold') format('svg');
+}

@@ -1,0 +1,38 @@
+.c-breadcrumb {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 70px;
+    & .breadcrumb {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        & .breadcrumb-item {
+            font-size: $font20;
+            font-family: var(--fontFamilyRegular);
+            color:var(--white);
+            a {
+                color:var(--white);
+                &:hover {
+                    color: var(--themeTertiary);  
+                }
+            }
+            &.active {
+                color: var(--themeTertiary);
+            }
+        
+        }
+        & .breadcrumb-item+.breadcrumb-item {
+            position: relative;
+            padding-left: 33px;
+            margin-left: 10px;
+
+        }
+        & .breadcrumb-item+.breadcrumb-item::before  {
+            content: ">>";
+            position: absolute;
+            left:0;
+            color: var(--white);
+        }
+    }
+}

@@ -1,0 +1,230 @@
+.c-dashboard {
+    $dashboard:&;
+    width: 100%;
+    &__boxsection {
+        width: 100%;
+        background-color: var(--white);
+        padding:20px;
+        margin-bottom: 30px;
+        @include border-radius(15px);
+       
+
+        @include mq("desktop") {
+            padding:30px;
+        }
+        &.minheight230{
+            min-height:230px;
+        }
+        &.minheight500{
+            min-height:500px;
+        }
+        &--boxheadwrap {
+            @include flexbox;
+            @include align-items(center);
+            @include justify-content(space-between);
+            margin-bottom: 10px;
+            width: 100%;
+            & .head {
+                font-size: $font18;
+                font-family: var(--fontFamilyBold);
+                color:var(--black);
+            }
+            & .link {
+                font-size: $font14;
+                font-family: var(--fontFamilyBold);
+                color:var(--blue2);
+                @include transition(all .3s ease-out);
+                &:hover {
+                    color:var(--themeClr1); 
+                }
+            }
+        }
+    }
+
+    &__mainwrap {
+        width: 100%;
+        @include flexbox;
+        @include flex-direction(column, vertical);
+        &--leftsection {
+            width:100%;
+           
+            @include mq("desktop-wide") {
+                width:calc(100% - 484px);
+                margin-left:15px;
+                margin-right:15px;
+            }
+        }
+    
+    
+    
+        &--rightsection {
+            width:100%;
+            @include flexbox;
+            @include flex-direction(column, vertical);
+            @include mq("desktop-wide") {
+                width:calc(484px - 30px);
+                margin-left:15px;
+                margin-right:15px;
+            }
+            & .highlightnote {
+                width: 100%;
+                height:130px;
+                overflow: auto;
+                & .item {
+                    background-color: var(--grey13);
+                    padding:10px 15px;
+                    font-size: $font12;
+                    font-family: var(--fontFamilyRegular);
+                    line-height: 18px;
+                    color: var(--black3);
+                    @include border-radius(10px);
+                    margin-top: 8px;
+                    &:first-child{
+                        margin-top: 0px;
+                    }
+                }
+
+            }
+
+        }
+        @include mq("desktop-wide") {
+            flex-direction: row;
+            width: calc(100% + 30px);
+            margin-left: -15px;
+            margin-right:-15px;
+        }
+
+        &.fullwidth {
+            .c-dashboard__mainwrap--leftsection {
+                @include mq("desktop-wide") {
+                    width: 100%;
+                }
+            }
+            .c-dashboard__mainwrap--rightsection {
+                display: none;
+            }
+        }
+    }
+
+    &__profiletop {
+        @include flexbox;
+        @include flex-direction(column, vertical);
+        margin-bottom: 50px;
+        &--withimg {
+            @include flexbox;
+            @include align-items(center);
+            width: 100%;
+            & .imgwrap {
+                width: 60px;
+                height: 60px;
+                @include border-radius(50%);
+                overflow: hidden;
+                & .u-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            & .procontent {
+                width: calc(100% - 60px);
+                padding-left:20px;
+                @include flexbox;
+                @include flex-direction(column, vertical);
+                & .proname {
+                    font-size: $font18;
+                    font-family: var(--fontFamilyBold);
+                    color:var(--black);
+                    margin-bottom: 2px;
+                }
+                & .prodis {
+                    font-size: $font18;
+                    font-family: var(--fontFamilyRegular);
+                    color:var(--black3);
+                }
+            }
+            @include mq("desktop") {
+                width: 60%;
+            }
+        }
+
+        &--profilesize {
+            width: 100%;
+            & .headtext {
+                width: 100%;
+                text-align: right;
+                font-size: $font18;
+                font-family: var(--fontFamilyBold);
+                color:var(--blue2);
+            }
+            & .subhead {
+                width: 100%;
+                text-align: left;
+                font-size: $font14;
+                font-family: var(--fontFamilyMedium);
+                color:var(--grey12);
+            }
+            & .progress-bar__wrapper {
+                position: relative;
+            }
+            &  .progress-bar__value {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+              &  progress {
+                width: 100%;
+                height:4px;
+                border-radius: 50px;
+                background-color: var(--grey12);
+                transition: width 300ms ease;
+                
+              }
+
+              & .progressvalue {
+                    position:relative;
+                 span {
+                    position:absolute;
+                    z-index: 1;
+                    font-size: 9px;
+                    color:#528FCC;
+                    font-family: var(--fontFamilyMedium);
+                    right:0;
+                    top:-2px;
+                 }
+                }
+              
+              &   progress[value]::-webkit-progress-bar {
+                width: 100%;
+                height: 4px;
+                border-radius: 50px;
+                background-color: #ddd;
+                transition: width 300ms ease;
+              }
+              &  progress[value]::-webkit-progress-value {
+                width: 0;
+                border-radius: 50px;
+                background-color: var(--blue3);
+                transition: width 300ms ease;
+              }
+            @include mq("desktop") {
+                width: 40%;
+                padding-left:20px;
+                margin-top: -16px;
+            }
+        }
+
+        @include mq("desktop") {
+            @include flex-direction(row, horizontal);
+            @include justify-content(space-between);
+        }
+    }
+
+   
+
+   
+}

@@ -1,0 +1,79 @@
+.c-appprocess {
+  $process:&;
+  width: 100%;
+  background-color: var(--white);
+  padding:60px 0px;
+  &__headsection {
+     margin-bottom: 30px;
+     @include mq("tablet-max") {
+        margin-bottom: 40px; 
+     }
+  }
+  &__content {
+    @include flexbox;
+    @include flex-direction(column, vertical);
+    position: relative;
+    &--imgwrap { 
+        width: 60px;
+        height: 60px;
+        margin: 0px;
+        margin-bottom: 20px;
+        @include border-radius(50%);
+        background-color: var(--themeTertiary);
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(center);
+        & .u-img {
+            height: 26px;
+            width: auto;
+        }
+     }
+
+     &--head {
+        font-size: $font22;
+        color:var(--black);
+        margin-bottom:12px;
+        font-family: var(--fontFamilyBold);
+       
+
+     }
+    &--dis {
+        font-size: $font16;
+        color:var(--black);
+        font-family: var(--fontFamilyRegular);
+        font-style: italic;
+        line-height: 26px;
+        flex: 1;
+    }
+    &:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(255, 255, 255,  0.3);
+        backdrop-filter: blur(10px);
+        z-index: 999;
+        left:0;
+        top:0;
+        opacity: 0;
+    }
+    
+  }
+ 
+   
+  
+
+
+  & .c-cardlist__item {
+    padding:25px 32px;
+}
+
+@include mq("tablet-max") {
+    padding:70px 0px;
+}
+
+@include mq("desktop-min") {
+    padding:80px 0px;
+}
+
+}

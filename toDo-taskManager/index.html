@@ -1,11 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Manager</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task Manager</title>
+        <link rel="stylesheet" href="style/css/default.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        >
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="taskWrapper">
+                        <div class="sectionWrapper">
+                            <div class="sectionWrapper__title">
+                                ToDo List
+                            </div>
+                            <div class="sectionWrapper__name">
+                                <input type="text" placeholder="Enter Task Name">
+                            </div>
+                            <div class="sectionWrapper__option">
+                                <select name="Select Priority">
+                                    <option class="sectionWrapper__option--low">Select Priority</option>
+                                    <option class="sectionWrapper__option--low">Low</option>
+                                    <option class="sectionWrapper__option--medium">Medium</option>
+                                    <option class="sectionWrapper__option--high">High</option>
+                                </select>
+                            </div>
+                            <button class="sectionWrapper__actionBtn">Add Task</button>
+                            <div class="sectionWrapper__search">
+                                <input type="text" placeholder="Search tasks...">
+                            </div>
+                            <div class="sectionWrapper__tasklist">
+                                <div class="sectionWrapper__tasklist--result low">
+                                    <div class="value">
+                                        Content
+                                    </div>
+                                    <div class="btnWrapper">
+                                        <button class="editBtn">
+                                            <img src="assets/images/icon/editIcon.png" class="img-fluid u-image">
+                                        </button>
+                                        <button class="delBtn">
+                                            <img src="assets/images/icon/deleteIcon.png" class="img-fluid u-image">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="sectionWrapper__tasklist--result med">
+                                    <div class="value">
+                                        Content
+                                    </div>
+                                    <div class="btnWrapper">
+                                        <button class="editBtn">
+                                            <img src="assets/images/icon/editIcon.png" class="img-fluid u-image">
+                                        </button>
+                                        <button class="delBtn">
+                                            <img src="assets/images/icon/deleteIcon.png" class="img-fluid u-image">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="sectionWrapper__tasklist--result high">
+                                    <div class="value">
+                                        Content
+                                    </div>
+                                    <div class="btnWrapper">
+                                        <button class="editBtn">
+                                            <img src="assets/images/icon/editIcon.png" class="img-fluid u-image">
+                                        </button>
+                                        <button class="delBtn">
+                                            <img src="assets/images/icon/deleteIcon.png" class="img-fluid u-image">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

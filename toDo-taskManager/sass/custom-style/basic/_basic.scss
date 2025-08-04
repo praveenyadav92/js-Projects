@@ -1,0 +1,252 @@
+/* Begin body related files
+   ======================== */
+   ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px
+}
+
+::-webkit-scrollbar-track {
+    background: #dae1e8
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.15);
+    -webkit-border-radius: 10px;
+    border-radius: 10px
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0, 0, 0, 0.15)
+}
+
+
+
+.scrollBar-smallWidth::-webkit-scrollbar,
+.withScrollVertical::-webkit-scrollbar,
+.adm-c-tableGrid__container .table-responsive.withScroll::-webkit-scrollbar {
+    width: 5px !important;
+    height: 5px !important
+}
+.noScroll {
+    overflow: hidden !important;
+    min-height: 100vh;
+}
+
+
+
+
+
+body {
+    font-family: var(--fontFamilyRegular);
+    background-color: var(--white);
+
+    .themeMode.dark {
+        display: none;
+    }
+
+    .themeMode.light {
+        display: block;
+    }
+
+    &.dark {
+        background-color:#000;
+        .themeMode.light {
+            display: none;
+        }
+
+        .themeMode.dark {
+            display: block;
+        }
+
+        
+        .c-latestadvrtisement__slider.v2 .c-latestadvrtisement__slider--item .content-info p {
+            color:var(--white);
+        }
+    }
+
+    &.fixed {
+        @include mq("tablet") {
+            .overlay-icon {
+                position: fixed;
+                z-index: 999;
+                background-color: var(--grey3);
+                border-radius: 30px;
+                width: 35px;
+
+            }
+        }
+
+    }
+}
+
+@import "_partial/helper";
+@import "_partial/button";
+@import "_partial/_dropdowns";
+@import "_partial/headingElm";
+@import "_partial/socialIocn";
+@import "_partial/selectPicker";
+@import "_partial/cardlist";  
+@import "_partial/tablink";
+@import "_partial/breadcrumb"; 
+
+// ==================global====================
+
+svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--grey3);
+}
+
+body.afterlogin {
+    .c-header {
+        position: fixed;
+    -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, .3);
+    -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, .3);
+    -ms-box-shadow: 0 3px 5px rgba(57, 63, 72, .3);
+    box-shadow: 0 3px 5px rgba(57, 63, 72, .3);
+    background-color: var(--white);
+   
+    z-index: 999;
+    }
+    .navigation, .c-header__right--right_content {
+        animation-delay: 1s;
+    }
+    .menu-link {
+        color: var(--black3);
+    }
+    .c-header__right--right_content .user {
+        background-color: var(--themeClr3);
+    }
+    .c-header__right--right_content .user img {
+        display: none;
+    }
+    .c-header__right--right_content .user span.shortname {
+        display: block;
+        font-size:23px;
+        color:white;
+        font-family: var(--fontFamilyBold);
+    }
+    .c-header__right--right_content .theme-optn {
+        display: none;
+    }
+    .c-header .burger-line {
+        background: var(--black);
+    }
+    & .accessibility_btns {
+        display: none;
+    }
+}
+
+
+
+body.loginpage {
+    .c-header {
+        position: fixed;
+    -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, .3);
+    -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, .3);
+    -ms-box-shadow: 0 3px 5px rgba(57, 63, 72, .3);
+    box-shadow: 0 3px 5px rgba(57, 63, 72, .3);
+    background-color: var(--white);
+   
+    z-index: 999;
+    }
+    .navigation, .c-header__right--right_content {
+        animation-delay: 0s;
+    }
+    .menu-link {
+        color: var(--black3);
+    }
+    .c-header__right--right_content .user {
+        background-color: var(--themeClr3);
+    }
+
+    .c-header__right--right_content .theme-optn {
+        display: none;
+    }
+   
+    
+   
+    
+}
+
+
+.adv__container.design1 {
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+::placeholder {
+    color: var(--grey8) !important;
+    font-family: var(--fontFamilyRegular) !important;
+    font-size: $font16 !important;
+    font-weight: 600;
+    line-height: 2;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input:focus,
+.form-control:focus {
+    box-shadow: none !important;
+}
+
+button:focus,
+.bootstrap-select .dropdown-toggle:focus,
+.bootstrap-select>select.mobile-device:focus+.dropdown-toggle {
+    outline: 0 !important;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: var(--grey);
+    color: var(--grey3);
+}
+
+
+
+button {
+    background-color: var(--bg-transparent);
+    border: 0;
+}
+
+.btn-check:checked+.btn,
+:not(.btn-check)+.btn:active,
+.btn:first-child:active,
+.btn.active,
+.btn.show {
+    color: auto;
+    background-color: auto;
+    border-color: uto;
+
+}
+
+
+
+
+
