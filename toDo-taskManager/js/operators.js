@@ -1,11 +1,11 @@
 // Task 1: Addition & Subtraction
-console.log(5+5);
-console.log("5"+5);
-console.log(5+"5");
+// console.log(5+5);
+// console.log("5"+5);
+// console.log(5+"5");
 // console.log(Number("5"+"5"));
-console.log(Number("5")+Number("5"));
-console.log(+"5" + +"10");
-console.log(+"5" + -"10");
+// console.log(Number("5")+Number("5"));
+// console.log(+"5" + +"10");
+// console.log(+"5" + -"10");
 
 
 document.getElementById("one").innerHTML="Ans: = " + (7 + 8);
@@ -57,8 +57,121 @@ document.getElementById("multi4").innerHTML="Ans: =" + (-3*6);
 document.getElementById("multi5").innerHTML="Ans: =" + (2+3)*4;
 
 
-document.getElementById("exp1").innerHTML = "Ans: = " + (2 ** 3);
-document.getElementById("exp2").innerHTML="Ans: ="+ ;
-document.getElementById("exp3").innerHTML="Ans: ="+ ;
-document.getElementById("exp4").innerHTML="Ans: ="+ ;
-document.getElementById("exp5").innerHTML="Ans: ="+ ;
+// document.getElementById("exp1").innerHTML = "Ans: = " + (2 ** 3);
+// document.getElementById("exp2").innerHTML="Ans: ="+ ;
+// document.getElementById("exp3").innerHTML="Ans: ="+ ;
+// document.getElementById("exp4").innerHTML="Ans: ="+ ;
+// document.getElementById("exp5").innerHTML="Ans: ="+ ;
+
+
+// Task 1: Temperature Conversion
+
+// You are given a temperature in Celsius. Convert it to Fahrenheit using the formula:
+
+// 𝐹=(𝐶×95)+32F=(C×59)+32
+
+// Your tasks:
+
+// Store a temperature in Celsius in a variable.
+
+// Convert it into Fahrenheit using the formula.
+
+// Print both Celsius and Fahrenheit values.
+
+const Celsius = 25;
+const Fahrenheit = (Celsius * 9/5) + 32;
+console.log("Temprature in Celsius is ="+Celsius +" , " +"Temprature in fahrenheit is"+Fahrenheit);
+
+
+// Task 2: Rectangle Area and Perimeter
+
+// You are given the length and width of a rectangle.
+
+// Your tasks:
+
+// Store length and width in variables.
+
+// Calculate the area = length × width.
+
+// Calculate the perimeter = 2 × (length + width).
+
+// Print area and perimeter.
+
+const length = 25;
+const width = 35;
+const area = length * width;
+const perimeter = 2 * (length + width);
+console.log("Area is =" + area + " , "+  "Perimeters are = " + perimeter );
+
+
+
+// Task 3: Average Marks
+
+// A student scored 85 in Math, 90 in Science, and 78 in English.
+
+// Your tasks:
+
+// Store the marks in variables.
+
+// Calculate the total marks.
+
+// Find the average marks.
+
+// Print total and average.
+
+const mathMarks = 85;
+const scienceMarks = 90;
+const englishMarks = 78;
+const totalMarks = mathMarks + scienceMarks + englishMarks;
+const averageMarks = totalMarks / 3 ;
+
+console.log("Total marks are ="+ totalMarks + " , "+ "Average of marks =" + averageMarks);
+
+
+// Task 4: Remainder Operator
+
+// You want to divide 29 apples equally among 5 friends.
+
+// Your tasks:
+
+// Store the number of apples and number of friends in variables.
+
+// Use the division operator (/) to find how many apples each friend gets.
+
+// Use the modulus operator (%) to find how many apples remain.
+
+// Print the result.
+
+
+const totalApples = 29;
+const totalFriends = 5;
+const eachApples = Math.floor(totalApples/totalFriends);
+const remainApples = totalApples % totalFriends;
+
+console.log("Apple for each Friends =" + eachApples + " , "+ "No of Remaining Apples =" + remainApples);
+
+
+
+// Task 5: Compare Numbers
+
+// You are given two numbers: a = 15 and b = 20.
+
+// Your tasks:
+
+// Use comparison operators (>, <, >=, <=, ===, !==) to compare a and b.
+
+// Store results in Boolean variables.
+
+// Print all results.
+
+const a = 15;
+const b = 20;
+const greaterThen = a>b;
+const lessThen = a<b;
+const greaterThenOrEquilesto = a>=b;
+const lessThenOrEquilesto = a<=b;
+const checkEverthing = a ===b;
+const notEqualsTo = a !==b;
+
+console.log (greaterThen,lessThen,greaterThenOrEquilesto,lessThenOrEquilesto,checkEverthing,notEqualsTo);
+

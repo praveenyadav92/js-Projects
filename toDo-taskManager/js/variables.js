@@ -47,3 +47,6 @@ let currentYear = 2025;
 document.getElementById("birthyear").innerHTML+= "Ans with let:= " + currentYear+ "<br>";
 currentYear = 1992;
 document.getElementById("birthyear").innerHTML+= "Ans with let changed Value:= " + currentYear;
+
+
+
