@@ -175,3 +175,122 @@ const notEqualsTo = a !==b;
 
 console.log (greaterThen,lessThen,greaterThenOrEquilesto,lessThenOrEquilesto,checkEverthing,notEqualsTo);
 
+
+// New Practice Tasks
+// Task 1: Simple Calculator
+
+// You are given two numbers: num1 = 12, num2 = 5.
+
+// Your tasks:
+
+// Store numbers in variables.
+
+// Calculate sum, difference, product, quotient, and remainder.
+
+// Print all results.
+
+const num1 = 12;
+const num2 = 5;
+const sum = num1+num2;
+const difference = num1 == num2;
+const product = num1 * num2;
+const quotient = num1/num2;
+const remainder = num1%num2;
+console.log(sum,difference,product,quotient,remainder);
+
+
+
+// Task 2: Compound Assignment
+
+// You start with let x = 10.
+
+// Your tasks:
+
+// Add 5 to x using +=.
+
+// Multiply x by 3 using *=.
+
+// Subtract 4 from x using -=.
+
+// Divide x by 2 using /=.
+
+// Print x after each operation.
+
+
+let x = 10;
+console.log(x);
+x+= 5;
+console.log(x);
+x*= 3;
+console.log(x);
+x-=4;
+console.log(x);
+x/=2;
+console.log(x);
+
+
+// Task 4: Logical Operators
+
+// You want to check if a number is between 10 and 50.
+
+// Your tasks:
+
+// Store a number in a variable.
+
+// Use the AND (&&) operator to check if it is greater than 10 and less than 50.
+
+// Use the OR (||) operator to check if it is less than 10 or greater than 50.
+
+// Use the NOT (!) operator to flip a condition.
+
+// Print all results.
+
+const num = 15;
+const andResult = num > 10 && num<60;
+const orResult = num <=20 || num>=60;
+const notResult = !(num ===15);
+console.log(andResult,orResult,notResult);
+
+// Task 6: Increment and Decrement
+
+// Start with let count = 10.
+
+// Your tasks:
+
+// Increase count by 1 using ++.
+
+// Decrease count by 1 using --.
+
+// Print results after each operation.
+
+
+let count = 10;
+let increase = count++;
+let decrease = count--;
+console.log(increase,decrease);
+
+
+
+const firstName = "Praveen";
+const lastName = "Yadav";
+const birthYear = 1992;
+const currentYear = 2050;
+const myDetails = `My Self ${firstName},${lastName} I am ${currentYear-birthYear} year's old`;
+console.log(myDetails);
+
+
+// const marksWeight = 78;
+// const marksHeight = 1.69;
+// const johnsWeight = 92;
+// const johnssHeight = 1.95;
+const marksWeight = 95;
+const marksHeight = 1.88;
+const johnsWeight = 85;
+const johnssHeight = 1.76;
+const marksBMI = marksWeight / marksHeight ** 2;
+const johnsBMI = johnsWeight / johnssHeight ** 2;
+const markHigherBmi = marksBMI > johnsBMI;
+
+console.log("Makrs BMI = " + marksBMI);
+console.log("Johns BMI = " + johnsBMI);
+console.log("Is Mark's BMI higher than John's?" + markHigherBmi);
