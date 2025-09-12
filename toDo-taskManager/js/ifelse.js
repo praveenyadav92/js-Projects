@@ -1,14 +1,14 @@
-const name = "Bijeta"
-const age = 20;
-const canDrive = age >= 18;
+// const name = "Bijeta"
+// const age = 20;
+// const canDrive = age >= 18;
 
-if (canDrive) {
-    console.log(name+" can apply for Driving license");
-}
-else {
-    const remaingYears = 18-age;
-    console.log(`${name} you have to wait for another ${remaingYears} years to apply for a new Driving license`);
-}
+// if (canDrive) {
+//     console.log(name+" can apply for Driving license");
+// }
+// else {
+//     const remaingYears = 18-age;
+//     console.log(`${name} you have to wait for another ${remaingYears} years to apply for a new Driving license`);
+// }
 
 
 // const birthYear = 1992;
@@ -175,3 +175,120 @@ if (password === "admin123") {
 else {
     console.log("Access denied");
 }
+
+
+
+
+// Intermediate If–Else Practice 🌟
+
+// Task 1: Movie Ticket Pricing 🎟️
+
+// A cinema charges:
+
+// ₹120 per ticket for adults (age 18–59)
+
+// ₹80 for children (under 18)
+
+// ₹100 for seniors (60 and above)
+
+// 👉 Write a program that takes age as input and prints the ticket price.
+
+const age = Number(prompt("Enter age form 0-100"));
+
+if (age >= 18 && age <=59) {
+    console.log("Ticket price is ₹120 for adults");
+}
+else if (age>= 0 && age <18) {
+    console.log("Ticket price is ₹80 for children");
+}
+else if (age >= 60 && age<=100) {
+    console.log("Ticket price is ₹100 for seniors");
+}
+else {
+    console.log("Wrong Input please Enter age from 0-100");
+}
+
+
+
+// Task 2: Leap Year Checker 📅
+
+// A year is a leap year if:
+
+// divisible by 4, but
+
+// not divisible by 100, unless also divisible by 400.
+
+// 👉 Input year = 2024, and print whether it’s a leap year or not.
+
+
+
+
+
+
+// Task 3: Student Result Calculator 📊
+
+// A student has scores in Math, Science, English.
+
+// Rules:
+
+// Average ≥ 90 → Grade A
+
+// 75–89 → Grade B
+
+// 50–74 → Grade C
+
+// Below 50 → Fail
+
+// 👉 Print Total Marks, Average, and Grade using if–else if–else.
+
+
+
+
+
+
+// Task 4: ATM Withdrawal 💰
+
+// Balance = 5000.
+
+// A user wants to withdraw some amount.
+
+// 👉 If amount ≤ balance, print "Transaction Successful" and new balance.
+
+// 👉 Else print "Insufficient Balance".
+
+
+
+
+
+
+
+// Task 5: Traffic Light 🚦
+
+// A variable signal can have values: "red", "yellow", "green".
+
+// 👉 Print:
+
+// "Stop" if red
+
+// "Get Ready" if yellow
+
+// "Go" if green
+
+// "Invalid signal" otherwise.
+
+
+
+
+
+
+// Task 6: Simple Login System 🔑
+
+// Username = "admin", Password = "1234".
+
+// 👉 If both match → "Login Successful"
+
+// 👉 Else if username correct but password wrong → "Incorrect Password"
+
+// 👉 Else if password correct but username wrong → "Incorrect Username"
+
+// 👉 Else → "Login Failed".
