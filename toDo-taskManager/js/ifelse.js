@@ -193,20 +193,20 @@ else {
 
 // 👉 Write a program that takes age as input and prints the ticket price.
 
-const age = Number(prompt("Enter age form 0-100"));
+// const age = Number(prompt("Enter age form 0-100"));
 
-if (age >= 18 && age <=59) {
-    console.log("Ticket price is ₹120 for adults");
-}
-else if (age>= 0 && age <18) {
-    console.log("Ticket price is ₹80 for children");
-}
-else if (age >= 60 && age<=100) {
-    console.log("Ticket price is ₹100 for seniors");
-}
-else {
-    console.log("Wrong Input please Enter age from 0-100");
-}
+// if (age >= 18 && age <=59) {
+//     console.log("Ticket price is ₹120 for adults");
+// }
+// else if (age>= 0 && age <18) {
+//     console.log("Ticket price is ₹80 for children");
+// }
+// else if (age >= 60 && age<=100) {
+//     console.log("Ticket price is ₹100 for seniors");
+// }
+// else {
+//     console.log("Wrong Input please Enter age from 0-100");
+// }
 
 
 
@@ -292,3 +292,101 @@ else {
 // 👉 Else if password correct but username wrong → "Incorrect Username"
 
 // 👉 Else → "Login Failed".
+
+// CHALLENGE #4
+// Steven needs a very simple tip calculator for whenever he goes to eat in a restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
+
+// Your tasks:
+
+// Calculate the tip, depending on the bill value. Create a variable called tip for this. It's not allowed to use an if...else statement (if it's easier for you, you can start with an if...else statement, and then try to convert it to a ternary operator).
+
+// Print a string to the console containing the bill value, the tip, and the final value (bill + tip).
+
+// Example: The bill was 275, the tip was 41.25, and the total value 316.25.
+
+// Note: Use the values of the bill and tip variables to construct this string. Don't hard-code them 🙂
+
+// TEST DATA: Test with different bill values: 275, 40, and 430
+
+// HINT: To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+
+// HINT 2: Value X is between 50 and 300, if it's >= 50 && <= 300 😉
+
+const bill = 280;
+const tip = (bill >= 50 && bill <=300) ? bill * 0.15 : bill * 0.20;
+const total = bill + tip;
+console.log (`The actual bill is ${bill}, the tip is ${tip}, and the total value is ${total}`);
+
+
+// Task 1: Basic Condition (Very Easy)
+
+// Goal: Check if a number is positive or negative.
+
+// Requirement
+
+// Create a variable num
+
+// Use a ternary operator
+
+// Print:
+
+// "Positive" if number ≥ 0
+
+// "Negative" otherwise
+
+const num = -1;
+const result = (num >= 0) ? "positive Number" : "Negative number";
+console.log (result);
+
+
+
+// Task 2: Even or Odd
+
+// Goal: Check if a number is even or odd.
+
+// Requirement
+
+// Variable: number
+
+// Use % operator
+
+// Use ternary only (no if)
+
+const numtest = 11;
+const resultOddEven = (numtest % 2 === 0) ? "Even number" : "Odd number";
+console.log (resultOddEven);
+
+
+// Task 3: Age Check
+
+// Goal: Check if a person is eligible to vote.
+
+// Condition
+
+// Age 18 or more → "Eligible"
+
+// Otherwise → "Not Eligible"
+
+
+const age = 18;
+const resulVote = (age >= 18 && age <= 100) ? "you are eligible vote" : "you are not eligible for vote";
+console.log (resulVote);
+
+
+
+// Task 4: Password Length Check (Medium)
+
+// Goal: Validate password length.
+
+// Rules
+
+// Length ≥ 8 → "Strong Password"
+
+// Otherwise → "Weak Password"
+
+const passLength = "abgfgfgfgf78";
+const resultPass = (passLength.length >= 8 ) ? "Strong Password" : "Weak Password" ;
+console.log(resultPass);
+
+
+
